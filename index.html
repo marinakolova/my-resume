@@ -566,8 +566,9 @@
     <footer class="py-5 bg-dark">
         <div class="container">
             <p class="m-0 text-center text-white">Copyright &copy;
+                <span id="year"></span> 
                 &#x1D4DC;&#x1D4EA;&#x1D4FB;&#x1D4F2;&#x1D4F7;&#x1D4EA;
-                &#x1D4DA;&#x1D4F8;&#x1D4F5;&#x1D4F8;&#x1D4FF;&#x1D4EA; 2020</p>
+                &#x1D4DA;&#x1D4F8;&#x1D4F5;&#x1D4F8;&#x1D4FF;&#x1D4EA;</p>
         </div>
         <!-- /.container -->
     </footer>
@@ -610,6 +611,9 @@
             });
 
         })(jQuery); // End of use strict</script>
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
 </body>
 
 </html>
