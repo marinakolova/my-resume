@@ -100,21 +100,41 @@
                     <div id="skyshop">
                         <div class="card mb-4">
                             <div class="card-header bg-secondary text-white">
-                                <span class="font-weight-bold">Skyshop Bulgaria Ltd.</span> &#8226; 1 yr 4 mos
+                                <span class="font-weight-bold">Skyshop Bulgaria Ltd.</span> &#8226; <span
+                                    id="currentCompanyTotal"></span>
                             </div>
                             <div class="card-body">
                                 <blockquote class="blockquote mb-0">
                                     <p>Contact Center Team Manager</p>
-                                    <footer class="blockquote-footer">Jun 2020 - Present &#8226; <cite>Full-time</cite>
-                                        &#8226; 2 mos
+                                    <footer class="blockquote-footer"><span id="currentPosStartDate">Jun 2020</span> -
+                                        Present &#8226; <cite>Full-time</cite>
+                                        &#8226; <span id="currentPosTotal"></span>
                                     </footer>
                                 </blockquote>
                             </div>
-                            
+                            <ul class="text-secondary ml-3 mr-5">
+                                <li>Handle daily operations and make sure correct procedures are followed.</li>
+                                <li>Routinely give directions to the team members on what to do and how to improve.
+                                </li>
+                                <li>Offer advice or authorize a special adjustment, when an employee needs help dealing
+                                    with customer concerns.</li>
+                                <li>Schedule workers to ensure adequate coverage and to maximize the productivity of
+                                    resources (people, technology etc.).</li>
+                                <li>Set goals for team members to achieve as a way to spur performance and to measure
+                                    effectiveness.</li>
+                                <li>Hire, coach and provide training to team members to maintain high customer service
+                                    standards.</li>
+                                <li>Monitor and improve ordering, telephone handling and other procedures.</li>
+                                <li>Evaluate performance with key metrics and think of ways to increase productivity and
+                                    customer satisfaction.</li>
+                                <li>Prepare reports for different departments or upper management.</li>
+                            </ul>
+
                             <div class="card-body">
                                 <blockquote class="blockquote mb-0">
                                     <p>Contact Center Digital Customer Service Agent</p>
-                                    <footer class="blockquote-footer">Apr 2019 - Jun 2020 &#8226; <cite>Full-time</cite>
+                                    <footer class="blockquote-footer"><span id="currentCompanyStartDate">Apr 2019</span>
+                                        - Jun 2020 &#8226; <cite>Full-time</cite>
                                         &#8226; 1 yr 3 mos
                                     </footer>
                                 </blockquote>
@@ -452,6 +472,7 @@
                             <li class="list-group-item">Teamwork</li>
                             <li class="list-group-item">Problem Solving</li>
                             <li class="list-group-item">Organization Skills</li>
+                            <li class="list-group-item">Multitasking</li>
                             <li class="list-group-item">Communication</li>
                             <li class="list-group-item">Written Communication</li>
                             <li class="list-group-item">Customer Service</li>
@@ -497,8 +518,8 @@
                             <li class="list-group-item d-flex justify-content-between align-items-center">
                                 <span class="font-weight-bold">BeautyBooking</span>
                                 <cite>Web application for booking beauty appointments.</cite>
-                                <a href="https://github.com/marinakolova/BeautyBooking" target="_blank"
-                                    type="button" class="btn btn-outline-info btn-sm ml-2">See Source Code</a>
+                                <a href="https://github.com/marinakolova/BeautyBooking" target="_blank" type="button"
+                                    class="btn btn-outline-info btn-sm ml-2">See Source Code</a>
                             </li>
                         </ul>
                     </div>
@@ -647,6 +668,77 @@
                 target: '#mainNav',
                 offset: 56
             });
+
+            // Returns the mont
+            let getMonthByName = function getMonthByName(monthName) {
+                let months = {
+                    "Jan": 0,
+                    "Feb": 1,
+                    "Mar": 2,
+                    "Apr": 3,
+                    "May": 4,
+                    "Jun": 5,
+                    "Jul": 6,
+                    "Aug": 7,
+                    "Sep": 8,
+                    "Oct": 9,
+                    "Nov": 10,
+                    "Dec": 11
+                };
+                return months[monthName];
+            };
+
+            // Returns the months difference
+            // between two dates
+            function monthDiff(d1, d2) {
+                var months;
+                months = (d2.getFullYear() - d1.getFullYear()) * 12;
+                months -= d1.getMonth();
+                months += d2.getMonth();
+                return months <= 0 ? 0 : months;
+            }
+
+            // Converts the number of total months
+            // to a human-readable format
+            // e.g. 16 months => 1 yr 4 mos
+            function getBeautifiedTotal(totalMonths) {
+                let result = '',
+                    years = parseInt(totalMonths / 12),
+                    months = parseInt(totalMonths % 12);
+
+                if (years != 0) {
+                    result += years + " yr ";
+                }
+                result += months + " mos";
+                return result;
+            }
+
+            // Dyamically calculates current position total time
+            // and current company total time
+            (function calcTotalExperience() {
+                let currentPositionStartDate = $("#currentPosStartDate").text(),
+                    currentCompanyStartDate = $("#currentCompanyStartDate").text(),
+                    currentPositionParts = currentPositionStartDate.split(' '),
+                    currentCompanyParts = currentCompanyStartDate.split(' ');
+
+                let currentPosStartMonth = getMonthByName(currentPositionParts[0]),
+                    currentPosStartYear = currentPositionParts[1],
+                    currentCompanyStartMonth = getMonthByName(currentCompanyParts[0]),
+                    currentCompanyStartYear = currentCompanyParts[1];
+
+
+                let curPosStartDate = new Date(currentPosStartYear, currentPosStartMonth, 1, 0, 0, 0),
+                    curCompStartDate = new Date(currentCompanyStartYear, currentCompanyStartMonth, 1, 0, 0, 0);
+
+                let curPosMonths = monthDiff(curPosStartDate, new Date()) + 1,
+                    curCompMonths = monthDiff(curCompStartDate, new Date()) + 1;
+
+                let curPosTotal = getBeautifiedTotal(curPosMonths),
+                    curCompTotal = getBeautifiedTotal(curCompMonths);
+
+                $("#currentPosTotal").text(curPosTotal);
+                $("#currentCompanyTotal").text(curCompTotal);
+            })();
 
         })(jQuery); // End of use strict</script>
     <script>
