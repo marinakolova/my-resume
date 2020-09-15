@@ -4,5 +4,5 @@ My resume as one page site
 made with [Scrolling Nav Template](https://github.com/StartBootstrap/startbootstrap-scrolling-nav) 
 from [Start Bootstrap](https://github.com/StartBootstrap).
 
-### GitHub Pages Link: 
-:link: :point_right:  https://marinakolova.github.io/my-resume/
+### :link: GitHub Pages Link: 
+:point_right:  https://marinakolova.github.io/my-resume/
