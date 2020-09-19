@@ -8,22 +8,14 @@
     <title>Marina Kolova</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <style>
-        header {
-            padding: 156px 0 100px;
-        }
-
-        section {
-            padding: 150px 0;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body id="page-top">
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-        <div class="container">
+        <div class="container">            
             <a class="navbar-brand js-scroll-trigger" href="#page-top">Marina Kolova</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,14 +47,16 @@
     </nav>
 
     <!-- Header -->
-    <header class="bg-secondary text-white">
+    <header class="bg-secondary text-white">        
         <div class="container text-center">
             <img src="https://avatars1.githubusercontent.com/u/49078617?s=460&v=4" width="280" height="280" alt=""
                 class="rounded-circle img-thumbnail float-left d-inline" style="margin-top: -90px;">
             <h1>Marina Kolova</h1>
             <p class="lead">Team Manager at Skyshop Bulgaria Ltd. | Software Engineering Enthusiast</p>
         </div>
-    </header>
+        <!-- Floating Back to top button -->
+        <button onclick="topFunction()" id="myBtn" title="Go to top">&#x25B2;</button>
+    </header>    
 
     <!-- ABOUT -->
     <section id="about">
@@ -752,7 +746,7 @@
                 &#x1D4DA;&#x1D4F8;&#x1D4F5;&#x1D4F8;&#x1D4FF;&#x1D4EA;</p>
         </div>
         <!-- /.container -->
-    </footer>
+    </footer>    
     
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -763,12 +757,15 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>    
+    
     <!-- Custom JavaScript -->
     <script src="js/scrolling-nav.js"></script>
+    <script src="js/back-to-top-button.js"></script>
     <script src="js/current-job.js"></script>
     <script>
         document.getElementById("year").innerHTML = new Date().getFullYear();
     </script>
+
 </body>
 
 </html>
