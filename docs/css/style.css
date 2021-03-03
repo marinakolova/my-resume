@@ -47,6 +47,15 @@
   box-sizing: border-box;
 }
 
+::-moz-selection { 
+  background: #bd5d38;
+  color: #f8f9fa; 
+}
+::selection { 
+  background: #bd5d38;
+  color: #f8f9fa;
+}
+
 html {
   font-family: sans-serif;
   line-height: 1.15;
