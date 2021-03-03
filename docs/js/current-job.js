@@ -37,9 +37,19 @@
             months = parseInt(totalMonths % 12);
 
         if (years != 0) {
-            result += years + " yr ";
+            if (years === 1) {
+                result += years + " yr ";
+            } else {
+                result += years + " yrs ";
+            }
         }
-        result += months + " mos";
+        if (months != 0) {
+            if (months === 1) {
+                result += months + " mo";
+            } else {
+                result += months + " mos";
+            }
+        }        
         return result;
     }
 
