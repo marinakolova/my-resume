@@ -476,7 +476,7 @@ mark,
 
 .list-inline-item {
   display: inline-block;
-  font-size: 80px;
+  font-size: 90px;
 }
 .list-inline-item:not(:last-child) {
   margin-right: 0.5rem;
