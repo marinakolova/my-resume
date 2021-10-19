@@ -10130,8 +10130,8 @@ p.lead {
   background-color: #bd5d38;
 }
 
-.dev-icons {
-  font-size: 1.5rem;
+.dev-icons .list-inline-item {
+  font-size: 80px;
 }
 
 section.resume-section {
@@ -10186,4 +10186,69 @@ section.resume-section .resume-section-content {
   
 #myBtn:hover {
     background-color: #555; /* Add a dark-grey background on hover */
+}
+
+/*!
+ * Timeline
+ */
+
+.timeline-steps {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap
+}
+
+.timeline-steps .timeline-step {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 1rem
+}
+
+@media (min-width:768px) {
+    .timeline-steps .timeline-step:not(:last-child):after {
+        content: "";
+        display: block;
+        border-top: .25rem dotted #BD5D38;
+        width: 3.46rem;
+        position: absolute;
+        left: 7.5rem;
+        top: .3125rem
+    }
+    .timeline-steps .timeline-step:not(:first-child):before {
+        content: "";
+        display: block;
+        border-top: .25rem dotted #BD5D38;
+        width: 3.8125rem;
+        position: absolute;
+        right: 7.5rem;
+        top: .3125rem
+    }
+}
+
+.timeline-steps .timeline-content {
+    width: 10rem;
+    text-align: center
+}
+
+.timeline-steps .timeline-content .inner-circle {
+    border-radius: 1.5rem;
+    height: 1rem;
+    width: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #BD5D38
+}
+
+.timeline-steps .timeline-content .inner-circle:before {
+    content: "";
+    background-color: #BD5D38;
+    display: inline-block;
+    height: 3rem;
+    width: 3rem;
+    min-width: 3rem;
+    border-radius: 6.25rem;
+    opacity: .5
 }
