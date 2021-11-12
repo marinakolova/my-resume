@@ -10211,7 +10211,7 @@ section.resume-section .resume-section-content {
         content: "";
         display: block;
         border-top: .25rem dotted #BD5D38;
-        width: 3.46rem;
+        width: 4.46rem;
         position: absolute;
         left: 7.5rem;
         top: .3125rem
@@ -10220,7 +10220,7 @@ section.resume-section .resume-section-content {
         content: "";
         display: block;
         border-top: .25rem dotted #BD5D38;
-        width: 3.8125rem;
+        width: 4.8125rem;
         position: absolute;
         right: 7.5rem;
         top: .3125rem
@@ -10228,8 +10228,8 @@ section.resume-section .resume-section-content {
 }
 
 .timeline-steps .timeline-content {
-    width: 10rem;
-    text-align: center
+    width: 11rem;
+    text-align: center;
 }
 
 .timeline-steps .timeline-content .inner-circle {
