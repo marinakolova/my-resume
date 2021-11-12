@@ -10252,3 +10252,17 @@ section.resume-section .resume-section-content {
     border-radius: 6.25rem;
     opacity: .5
 }
+
+/*!
+ * svg
+ */
+
+.vscode-svg {
+  content: url("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg");
+  position: absolute;
+  max-width: 86%;
+  opacity: 18%;
+  z-index: -1;
+  margin-left: 0.5rem;
+  margin-top: 1.2rem;
+}
