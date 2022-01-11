@@ -10,7 +10,3 @@ My resume as one page site.
 - Using code from [Scrolling Nav](https://github.com/StartBootstrap/startbootstrap-scrolling-nav) Template by [Start Bootstrap](https://github.com/StartBootstrap).
 
 - Using code from [Resume](https://github.com/StartBootstrap/startbootstrap-resume) Template by [Start Bootstrap](https://github.com/StartBootstrap).
-
-- Icons from [Devicon](https://devicon.dev/).
-
-- SVG images from [unDraw](https://undraw.co/).
