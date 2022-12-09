@@ -1,9 +1,13 @@
 # my-resume
 
-My resume as one page site.
+My resume as one page site. Hosted on GitHub Pages.
 
 ### :link: GitHub Pages Link: 
 :point_right:  https://marinakolova.github.io/my-resume/
+
+<a href="https://marinakolova.github.io/my-resume/">
+  <img alt="my-resume-screenshot" src="https://marinakolova.github.io/my-resume/img/og_image.png" />
+</a>
 
 #### Acknowledgments:
 
